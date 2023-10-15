@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--
+IOC,默认创建对象是单实例(scope="singleton"),即每次从容器中获得的是同一个对象
+设置成scope="prototype",那就多实例,即每次从容器获得都是新对象
+-->
+<bean id="myClass" class="com.hyd.model.MyClass" scope="prototype">
+    <property name="id" value="22117"/>
+    <property name="name" value="T-king"/>
+</bean>
+
+</beans>
